@@ -9,6 +9,7 @@ isos = 'C:/Users/leona/Downloads/Iso'
 pdfs = 'C:/Users/leona/Downloads/PDFs'
 gerais = 'C:/Users/leona/Downloads/Gerais'
 livros = 'C:/Users/leona/Desktop/Livros'
+musicas = 'C:/Users/leona/Desktop/Musicas'
 
 arquivos = glob.glob('C:/Users/leona/Downloads/*.*')
 
@@ -41,6 +42,10 @@ for i in arquivos:
         else:
             shutil.move(i,pdfs)
             print("Arquivo " + aux[len(aux)-2] + " movido para " + pdfs)
+
+    elif tipo == 'mp3':
+        shutil.move(i,musicas)
+        print("Arquivo " + aux[len(aux)-2] + " movido para " + musicas)
     
     else:
         shutil.move(i,gerais)
